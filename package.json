@@ -1,4 +1,29 @@
 {
+<<<<<<< HEAD
+  "name": "task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "^5.3.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "http-status-codes": "^2.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "knex": "^3.1.0",
+    "nodemailer": "^6.9.15",
+    "nodemon": "^3.1.4",
+    "pg": "^8.12.0",
+    "sequelize": "^6.37.3"
+=======
   "name": "my-360-tribe",
   "homepage": "http://my360tribe.org/",
   "version": "0.1.0",
@@ -58,5 +83,6 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.4.1"
+>>>>>>> a3a2a092109a5ae90abd551b924ccef891c8b22e
   }
 }

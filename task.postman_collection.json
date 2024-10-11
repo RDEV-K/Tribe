@@ -1,0 +1,441 @@
+{
+	"info": {
+		"_postman_id": "8a292693-654c-4b1a-9a3e-b3a4cb5f1c77",
+		"name": "task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19755932"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"first_name\": \"muhammad\",\n  \"last_name\": \"tariq\",\n  \"email\": \"salikhan8458@gmail.com\",\n  \"password\": \"khan123\",\n  \"role\": \"superadmin\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/registration/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"registration",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"salikhan8458@gmail.com\",\n    \"password\":\"khan123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/registration/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"registration",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create operator",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibXVoYW1tYWQiLCJlbWFpbCI6InNhbGlraGFuODQ1OEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTcyNDMwMjI4OH0.vP_94MZtTbyfya4EzkFE4HhVxKoLPexl8fU_fhYzVp0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"first_name\":\"muhammad\",\n    \"last_name\":\"tariq\",\n    \"force\":\"navy\",\n    \"speciality\":\"coding\",\n    \"currently_employed\":true,\n    \"birth_date\":\"01/04/2024\",\n    \"address\":\"blue area islamabad\",\n    \"mental_health_support\":\"yes\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/operators/create-operator",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"operators",
+						"create-operator"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get operators",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibXVoYW1tYWQiLCJlbWFpbCI6InNhbGlraGFuODQ1OEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTcyNDMwMjI4OH0.vP_94MZtTbyfya4EzkFE4HhVxKoLPexl8fU_fhYzVp0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/operators/get-operators?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"operators",
+						"get-operators"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create concierge",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibXVoYW1tYWQiLCJlbWFpbCI6InNhbGlraGFuODQ1OEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTcyNDMwMjI4OH0.vP_94MZtTbyfya4EzkFE4HhVxKoLPexl8fU_fhYzVp0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n              \"full_name\":\"sameer ali khan\",\n          \"phone_number\":\"00123456789\",\n          \"email\":\"salikhan8458@gmail.com\",\n          \"service_branch\":\"backend developer\",\n          \"contact_number\":\"384724987928492\",\n          \"birth_date\":\"01/4/2021\",\n          \"how_heard_about_us\":\"linkedIn\",\n          \"why_concierge\":\"best in the town\",\n          \"hours_per_month\":160,\n          \"number_of_operators\":6,\n          \"transition_services\":\"idk\",\n          \"areas_of_support\":\"development\",\n          \"uncomfortable_topics\":\"none\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/concierge/create-concierge",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"concierge",
+						"create-concierge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get concierge",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibXVoYW1tYWQiLCJlbWFpbCI6InNhbGlraGFuODQ1OEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTcyNDMwMjI4OH0.vP_94MZtTbyfya4EzkFE4HhVxKoLPexl8fU_fhYzVp0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/concierge/get-concierges",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"concierge",
+						"get-concierges"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create service_partners",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibXVoYW1tYWQiLCJlbWFpbCI6InNhbGlraGFuODQ1OEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTcyNDMwMjI4OH0.vP_94MZtTbyfya4EzkFE4HhVxKoLPexl8fU_fhYzVp0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"organization_name\":\"blah blah\",\n        \"phone_number\":\"0123456789\",\n        \"address\":\"gulberg greens islamabad\",\n        \"web_url\":\"https://google.com\",\n        \"point_of_contact_name\":\"Muhammad Raheem\",\n        \"point_of_contact_email\":\"raheem@gmail.com\",\n        \"how_heard_about_us\":\"linkedIn\",\n        \"veteran_specific_services\":\"none\",\n        \"service_provided\":\"none\",\n        \"description\":\"hello peter\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/service-partners/create-service",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"service-partners",
+						"create-service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_peer_ambassador",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibXVoYW1tYWQiLCJlbWFpbCI6InNhbGlraGFuODQ1OEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTcyNDMwMjI4OH0.vP_94MZtTbyfya4EzkFE4HhVxKoLPexl8fU_fhYzVp0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n              \"full_name\":\"sameer ali khan afridi\",\n          \"phone_number\":\"00123456789\",\n          \"email\":\"salikhan8458@gmail.com\",\n          \"service_branch\":\"backend developer\",\n          \"contact_number\":\"384724987928492\",\n          \"birth_date\":\"01/4/2021\",\n          \"how_heard_about_us\":\"linkedIn\",\n          \"why_peer_ambassador\":\"best in the town\",\n          \"hours_per_month\":160,\n          \"number_of_operators\":6,\n          \"transition_services\":\"idk\",\n          \"areas_of_support\":\"development\",\n          \"uncomfortable_topics\":\"none\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/peer-ambassadors/create-peer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"peer-ambassadors",
+						"create-peer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_peer_ambassador",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibXVoYW1tYWQiLCJlbWFpbCI6InNhbGlraGFuODQ1OEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTcyNDMwMjI4OH0.vP_94MZtTbyfya4EzkFE4HhVxKoLPexl8fU_fhYzVp0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/peer-ambassadors/get-peers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"peer-ambassadors",
+						"get-peers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get services_partners",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibXVoYW1tYWQiLCJlbWFpbCI6InNhbGlraGFuODQ1OEBnbWFpbC5jb20iLCJyb2xlIjoic3VwZXJhZG1pbiIsImlhdCI6MTcyNDMwMjI4OH0.vP_94MZtTbyfya4EzkFE4HhVxKoLPexl8fU_fhYzVp0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/service-partners/get-services",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"service-partners",
+						"get-services"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sign-operator-to-concierge",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"signed_from\":\"operators\",\n    \"signed_to\":\"concierge\",\n    \"first_name\":\"muhammad\",\n    \"last_name\":\"tariq\",\n    \"force\":\"navy\",\n    \"speciality\":\"coding\",\n    \"currently_employed\":true,\n    \"birth_date\":\"01/04/2024\",\n    \"address\":\"blue area islamabad\",\n    \"mental_health_support\":\"yes\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sign/form",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sign",
+						"form"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sign_service_partners_to_concierge",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"signed_from\":\"service_partners\",\n    \"signed_to\":\"concierge\",\n      \"organization_name\":\"blah blah\",\n        \"phone_number\":\"0123456789\",\n        \"address\":\"gulberg greens islamabad\",\n        \"web_url\":\"https://google.com\",\n        \"point_of_contact_name\":\"Muhammad Raheem\",\n        \"point_of_contact_email\":\"raheem@gmail.com\",\n        \"how_heard_about_us\":\"linkedIn\",\n        \"veteran_specific_services\":\"none\",\n        \"service_provided\":\"none\",\n        \"description\":\"hello peter\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sign/form",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sign",
+						"form"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sign_concierge_to_peer_ambassador",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"signed_from\":\"concierge\",\n            \"signed_to\":\"peer_ambassador\",\n          \"full_name\":\"sameer ali khan\",\n          \"phone_number\":\"00123456789\",\n          \"email\":\"salikhan8458@gmail.com\",\n          \"service_branch\":\"backend developer\",\n          \"contact_number\":\"384724987928492\",\n          \"birth_date\":\"01/4/2021\",\n          \"how_heard_about_us\":\"linkedIn\",\n          \"why_concierge\":\"best in the town\",\n          \"hours_per_month\":160,\n          \"number_of_operators\":6,\n          \"transition_services\":\"idk\",\n          \"areas_of_support\":\"development\",\n          \"uncomfortable_topics\":\"none\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sign/form",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sign",
+						"form"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signed_from_peer_ambassador_to_operator",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"signed_from\":\"peer_ambassador\",\n        \"signed_to\":\"operators\",\n              \"full_name\":\"sameer ali khan afridi\",\n          \"phone_number\":\"00123456789\",\n          \"email\":\"salikhan8458@gmail.com\",\n          \"service_branch\":\"backend developer\",\n          \"contact_number\":\"384724987928492\",\n          \"birth_date\":\"01/4/2021\",\n          \"how_heard_about_us\":\"linkedIn\",\n          \"why_peer_ambassador\":\"best in the town\",\n          \"hours_per_month\":160,\n          \"number_of_operators\":6,\n          \"transition_services\":\"idk\",\n          \"areas_of_support\":\"development\",\n          \"uncomfortable_topics\":\"none\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sign/form",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sign",
+						"form"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
